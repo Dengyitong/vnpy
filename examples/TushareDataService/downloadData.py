@@ -15,6 +15,8 @@ import tushare as ts
 df = ts.bar('I1809', conn=ts.get_apis(),freq='D',asset='X',\
     start_date='2018-05-01',end_date='2018-05-05')
 
-help(tushare.bar)
+help(ts.bar)
 
 help(tushare.xapi)
+
+df=ts.bar('I1809',conn=ts.get_apis(), freq='1min',asset='X')

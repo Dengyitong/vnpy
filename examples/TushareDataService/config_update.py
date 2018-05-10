@@ -6,8 +6,6 @@ Created on Thu May 10 11:41:23 2018
 """
 #%%导入需要的库
 import datetime
-import pandas as pd
-import numpy as np
 import tushare as ts
 #%%全局对象
 today=datetime.date.today()#今天日期
