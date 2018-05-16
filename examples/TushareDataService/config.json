@@ -2,5 +2,5 @@
 	"MONGO_HOST": "localhost",
 	"MONGO_PORT": 27017,
 
-	"SYMBOLS": ["I1809"]
+	"SYMBOLS": ["I1809","J1809","JM1809","RB1810"]
 }

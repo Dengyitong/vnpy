@@ -8,15 +8,4 @@ from dataService import *
 
 
 if __name__ == '__main__':
-    downloadAllMinuteBar()
-    
-#%%测试模块
-import tushare as ts
-df = ts.bar('I1809', conn=ts.get_apis(),freq='D',asset='X',\
-    start_date='2018-05-01',end_date='2018-05-05')
-
-help(ts.bar)
-
-help(tushare.xapi)
-
-df=ts.bar('I1809',conn=ts.get_apis(), freq='1min',asset='X')
+    downloadAllMinuteBar('D')#需要下载日级别历史数据填"D",分钟级别数据填"1min"

@@ -17,3 +17,7 @@ symbol_shfe=ts.get_dce_daily(yesterday)['symbol'].tolist()#获取大商所的合
 symbol_shfe=ts.get_czce_daily(yesterday)['symbol'].tolist()#获取郑商所的合约
 #symbol.extend(ts.get_cffex_daily(date)['symbol'].tolist())#获取中金所的合约
 
+#%%信息栏
+'''
+合约代码需要大写
+'''
