@@ -1,0 +1,39 @@
+2018-04-29 22:37:07,559  INFO: MAIN_ENGINE	MongoDB连接成功
+2018-04-29 22:40:03,344  INFO: MAIN_ENGINE	接口不存在：
+2018-04-29 22:47:37,742  INFO: MAIN_ENGINE	MongoDB连接成功
+2018-04-29 22:47:58,122  INFO: MAIN_ENGINE	接口不存在：
+2018-04-29 22:48:13,375  INFO: CTA_STRATEGY	CTA引擎启动成功
+2018-04-29 22:49:26,101  INFO: MAIN_ENGINE	接口不存在：
+2018-04-29 22:49:32,476  INFO: MAIN_ENGINE	MongoDB连接成功
+2018-04-29 22:51:54,621  INFO: MAIN_ENGINE	MongoDB连接成功
+2018-04-29 22:52:15,854  INFO: FEMAS	行情服务器连接成功
+2018-04-29 22:52:33,283  INFO: SEC	行情服务器连接成功
+2018-04-29 22:52:33,290  INFO: SEC	期权行情服务器登录完成
+2018-04-29 22:52:33,295  INFO: SEC	交易服务器连接成功
+2018-04-29 22:52:33,296  INFO: SEC	股票行情服务器登录完成
+2018-04-29 22:52:33,331  INFO: MAIN_ENGINE	MongoDB连接成功
+2018-04-29 22:52:33,447  INFO: SEC	期权交易服务器登录完成
+2018-04-29 22:52:33,456  INFO: SEC	股票交易服务器登录完成
+2018-04-29 22:52:34,035  INFO: SEC	期权交易合约信息获取完成
+2018-04-29 22:52:52,493  INFO: MAIN_ENGINE	接口不存在：
+2018-04-29 22:53:00,704  DEBUG: Starting new HTTPS connection (1): stream-fxpractice.oanda.com
+2018-04-29 22:53:00,704  INFO: OANDA	接口初始化成功
+2018-04-29 22:53:00,706  DEBUG: Starting new HTTPS connection (1): api-fxpractice.oanda.com
+2018-04-29 22:53:00,706  DEBUG: Starting new HTTPS connection (2): api-fxpractice.oanda.com
+2018-04-29 22:53:01,901  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/instruments?accountId=%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:01,901  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/instruments?accountId=%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:02,157  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/orders HTTP/1.1" 401 169
+2018-04-29 22:53:02,418  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/transactions?count=100 HTTP/1.1" 401 169
+2018-04-29 22:53:03,628  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:06,621  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/positions HTTP/1.1" 401 169
+2018-04-29 22:53:09,670  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:12,717  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/positions HTTP/1.1" 401 169
+2018-04-29 22:53:15,778  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:19,571  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/positions HTTP/1.1" 401 169
+2018-04-29 22:53:21,809  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:24,861  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/positions HTTP/1.1" 401 169
+2018-04-29 22:53:27,910  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:30,996  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/positions HTTP/1.1" 401 169
+2018-04-29 22:53:33,997  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
+2018-04-29 22:53:37,049  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7/positions HTTP/1.1" 401 169
+2018-04-29 22:53:40,092  DEBUG: https://api-fxpractice.oanda.com:443 "GET /v1/accounts/%E8%AF%B7%E5%9C%A8OANDA%E7%BD%91%E7%AB%99%E7%94%B3%E8%AF%B7 HTTP/1.1" 401 169
