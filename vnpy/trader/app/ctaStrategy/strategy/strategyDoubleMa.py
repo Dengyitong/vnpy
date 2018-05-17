@@ -19,9 +19,9 @@ class DoubleMaStrategy(CtaTemplate):
     author = u'用Python的交易员'
     
     # 策略参数
-    fastWindow = 10     # 快速均线参数
-    slowWindow = 60     # 慢速均线参数
-    initDays = 10       # 初始化数据所用的天数
+    fastWindow = 2     # 快速均线参数
+    slowWindow = 4     # 慢速均线参数
+    initDays = 2      # 初始化数据所用的天数
     
     # 策略变量
     fastMa0 = EMPTY_FLOAT   # 当前最新的快速EMA
