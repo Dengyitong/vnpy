@@ -7,11 +7,11 @@
 from __future__ import division
 
 
-from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, MINUTE_DB_NAME
+from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, DAILY_DB_NAME
 
 
 if __name__ == '__main__':
-    from vnpy.trader.app.ctaStrategy.strategy.strategyKingKeltner import KkStrategy
+    from vnpy.trader.app.ctaStrategy.strategy.strategyDoubleMa import DoubleMaStrategy
     
     # 创建回测引擎
     engine = BacktestingEngine()
@@ -20,20 +20,20 @@ if __name__ == '__main__':
     engine.setBacktestingMode(engine.BAR_MODE)
 
     # 设置回测用的数据起始日期
-    engine.setStartDate('20170101')
+    engine.setStartDate('20171009')
     
     # 设置产品相关参数
-    engine.setSlippage(0.2)     # 股指1跳
-    engine.setRate(0.3/10000)   # 万0.3
-    engine.setSize(300)         # 股指合约大小 
-    engine.setPriceTick(0.2)    # 股指最小价格变动
+    engine.setSlippage(0.5)     # 股指1跳
+    engine.setRate(0.7/10000)   # 万0.3
+    engine.setSize(100)         # 股指合约大小 
+    engine.setPriceTick(0.5)    # 股指最小价格变动
     
     # 设置使用的历史数据库
-    engine.setDatabase(MINUTE_DB_NAME, 'IF0000')
+    engine.setDatabase(DAILY_DB_NAME, 'I1809')
     
     # 在引擎中创建策略对象
     d = {}
-    engine.initStrategy(KkStrategy, d)
+    engine.initStrategy(DoubleMaStrategy, d)
     
     # 开始跑回测
     engine.runBacktesting()
