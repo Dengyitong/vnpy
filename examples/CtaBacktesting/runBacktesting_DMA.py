@@ -4,8 +4,7 @@
 展示如何执行策略回测。
 """
 
-from __future__ import division
-
+from __future__ import division#python3总/表示真除，而python2带小数/才表示真除
 
 from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, DAILY_DB_NAME
 
@@ -39,4 +38,5 @@ if __name__ == '__main__':
     engine.runBacktesting()
     
     # 显示回测结果
-    engine.showBacktestingResult()
+    engine.showBacktestingResult()#显示按照每笔统计的结果
+    #engine.showDailyResult()#显示按日统计的结果
