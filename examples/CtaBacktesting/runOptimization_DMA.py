@@ -50,3 +50,5 @@ if __name__ == '__main__':
     #engine.runParallelOptimization(AtrRsiStrategy, setting)
     
     print u'耗时：%s' %(time.time()-start)
+    
+#%%测试模块

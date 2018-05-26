@@ -74,19 +74,24 @@ def downMinuteBarBySymbol(symbol,freq):
     cl = db[symbol]
     cl.ensure_index([('datetime', ASCENDING)], unique=True)         # 添加索引
   
-    df=ts.bar(symbol,conn=ts.get_apis(), freq=freq,asset='X')
-    df = df.sort_index()
+    try:
+        df=ts.bar(symbol,conn=ts.get_apis(), freq=freq,asset='X')
+        df = df.sort_index()
     
-    for ix, row in df.iterrows():
-        bar = generateVtBar(row)
-        d = bar.__dict__
-        flt = {'datetime': bar.datetime}
-        cl.replace_one(flt, d, True)            
-
-    end = time()
-    cost = (end - start) * 1000
-
-    print u'合约%s数据下载完成%s - %s，耗时%s毫秒' %(symbol, df.index[0], df.index[-1], cost)
+        for ix, row in df.iterrows():
+            bar = generateVtBar(row)
+            d = bar.__dict__
+            flt = {'datetime': bar.datetime}
+            cl.replace_one(flt, d, True)            
+    
+        end = time()
+        cost = (end - start) * 1000
+    
+        print u'合约%s数据下载完成%s - %s，耗时%s毫秒' %(symbol, df.index[0], df.index[-1], cost)
+        return "success"
+    except:
+        print "代码\"%s\"下载数据失败：请检查代码是否正确，如正确检查网络是否正常"%symbol
+        return "failed"
 
     
 #----------------------------------------------------------------------
@@ -98,8 +103,10 @@ def downloadAllMinuteBar(freq):
     
     # 添加下载任务
     for symbol in SYMBOLS:
-        downMinuteBarBySymbol(str(symbol),freq)
-    
+        
+        log=downMinuteBarBySymbol(str(symbol),freq)
+        if log=="failed":
+            break
     print '-' * 50
     print u'合约分钟线数据下载完成'
     print '-' * 50
