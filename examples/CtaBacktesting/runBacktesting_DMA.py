@@ -31,13 +31,13 @@ if __name__ == '__main__':
     engine.setDatabase(DAILY_DB_NAME, 'I1809')
     
     # 在引擎中创建策略对象
-    d = {'fastWindow':2,'slowWindow':4}
+    d = {'fastWindow':2,'slowWindow':4,'volume':2}
     engine.initStrategy(DoubleMaStrategy, d)
     
     # 开始跑回测
     engine.runBacktesting()
     
     # 显示回测结果
-    #engine.showBacktestingResult()#显示按照每笔统计的结果
-    engine.showDailyResult()#显示按日统计的结果
+    engine.showBacktestingResult()#显示按照每笔统计的结果
+    #engine.showDailyResult()#显示按日统计的结果
 #%%测试模块
