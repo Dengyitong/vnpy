@@ -19,7 +19,7 @@ if __name__ == '__main__':
     engine.setBacktestingMode(engine.BAR_MODE)
 
     # 设置回测用的数据起始日期
-    engine.setStartDate('20170915',initDays=45)
+    engine.setStartDate('20150703',initDays=0)
     
     # 设置产品相关参数
     engine.setSlippage(0.5)     # 滑点
@@ -28,10 +28,10 @@ if __name__ == '__main__':
     engine.setPriceTick(0.5)    # 最小价格变动
     engine.setCapital(20000)    #设置初始资金
     # 设置使用的历史数据库
-    engine.setDatabase(DAILY_DB_NAME, 'I1809')
+    engine.setDatabase(DAILY_DB_NAME, 'IL9')
     
     # 在引擎中创建策略对象
-    d = {'fastWindow':4,'slowWindow':2}
+    d = {'fastWindow':1,'slowWindow':30}
     engine.initStrategy(DoubleMaStrategy, d)
     
     # 开始跑回测
