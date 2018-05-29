@@ -20,23 +20,24 @@ if __name__ == '__main__':
     engine.setBacktestingMode(engine.BAR_MODE)
 
     # 设置回测用的数据起始日期
-    engine.setStartDate('20171009')
+    engine.setStartDate('20170915',initDays=0)
     
     # 设置产品相关参数
-    engine.setSlippage(0.5)     # 股指1跳
-    engine.setRate(0.7/10000)   # 万0.3
-    engine.setSize(100)         # 股指合约大小 
-    engine.setPriceTick(0.5)    # 股指最小价格变动
+    engine.setSlippage(1)     # 滑点
+    engine.setRate(0.7/10000)   # 手续费
+    engine.setSize(100)         # 合约大小 
+    engine.setPriceTick(0.5)    # 最小价格变动
+    engine.setCapital(20000)    #设置初始资金
     
     # 设置使用的历史数据库
     engine.setDatabase(DAILY_DB_NAME, 'I1809')
     
     # 跑优化
     setting = OptimizationSetting()                 # 新建一个优化任务设置对象
-    setting.setOptimizeTarget('totalReturn')            # 设置优化排序的目标是策略净盈利
-    setting.addParameter('fastWindow', 5, 10, 1)    # 增加第一个优化参数atrLength，起始12，结束20，步进2
-    setting.addParameter('slowWindow', 10, 60, 5)        # 增加第二个优化参数atrMa，起始20，结束30，步进5
-
+    setting.setOptimizeTarget('totalNetPnl')            # 设置优化排序的目标是策略净盈利
+    setting.addParameter('fastWindow', 1, 4, 1)    # 增加第一个优化参数atrLength，起始12，结束20，步进2
+    setting.addParameter('slowWindow', 5, 30, 5)        # 增加第二个优化参数atrMa，起始20，结束30，步进5
+  
     
     # 性能测试环境：I7-3770，主频3.4G, 8核心，内存16G，Windows 7 专业版
     # 测试时还跑着一堆其他的程序，性能仅供参考
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     engine.runOptimization(DoubleMaStrategy, setting)            
     
     # 多进程优化，耗时：89秒
-    #engine.runParallelOptimization(AtrRsiStrategy, setting)
+    #engine.runParallelOptimization(DoubleMaStrategy, setting)
     
     print u'耗时：%s' %(time.time()-start)
     

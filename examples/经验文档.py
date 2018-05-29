@@ -138,6 +138,29 @@ CTA策略模块的主要回测目标是验证交易信号是否正确，仓位�
 3.在交易时（buy,sell,short,cover）设置self.volume参数
 '''
 
+#-----5.策略参数优化回测（日K线）结果明显不正确，例如最大回测大得离谱？
+'''
+主要原因是多次回测中引擎中的回测结果没有清理干净，导致数据共享混乱。
+回测结果清理的方法为：BactestingEngine.clearBacktestingResult
+def clearBacktestingResult(self):
+    """清空之前回测的结果"""
+    # 清空限价单相关
+    self.limitOrderCount = 0
+    self.limitOrderDict.clear()
+    self.workingLimitOrderDict.clear()        
+    
+    # 清空停止单相关
+    self.stopOrderCount = 0
+    self.stopOrderDict.clear()
+    self.workingStopOrderDict.clear()
+    
+    # 清空成交相关
+    self.tradeCount = 0
+    self.tradeDict.clear()
+    
+    # 清空日线回测结果相关(往往是缺失这里)
+    self.dailyResultDict.clear()
+'''
 #%%策略回测结果可视化问题
 #-----1.策略结果可视化有几种形式？
 '''
@@ -227,6 +250,14 @@ profit&loss(pnl)：每笔交易的盈亏直方图（概率分布图）
 夏普比率：日均收益/收益标准差*根号240
 '''
 
+#-----4.为什么每笔统计和每日统计的最大回撤不一样？
+'''
+每笔统计的是损益的最大回撤，而每日统计的是权益最大回撤。
+【损益的最大回撤】
+从测试开始到结束，每笔动态损益计算出来的波段从高点到低点回撤的最大值
+【权益的最大回撤】
+从测试开始到结束，每日的动态权益计算出来的波段从高点到低点回撤的最大值
+'''
 #%%CTA策略模板
 #-----1.vnpy提供那些模板策略类？
 '''
