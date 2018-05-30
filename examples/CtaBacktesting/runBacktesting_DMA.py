@@ -31,7 +31,7 @@ if __name__ == '__main__':
     engine.setDatabase(DAILY_DB_NAME, 'IL9')
     
     # 在引擎中创建策略对象
-    d = {'fastWindow':1,'slowWindow':30}
+    d = {}
     engine.initStrategy(DoubleMaStrategy, d)
     
     # 开始跑回测
