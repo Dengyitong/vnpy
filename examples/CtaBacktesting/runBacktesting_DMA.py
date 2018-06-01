@@ -27,6 +27,7 @@ if __name__ == '__main__':
     engine.setSize(100)         # 合约大小 
     engine.setPriceTick(0.5)    # 最小价格变动
     engine.setCapital(20000)    #设置初始资金
+    
     # 设置使用的历史数据库
     engine.setDatabase(DAILY_DB_NAME, 'IL9')
     
