@@ -5,6 +5,5 @@
 	"DATA_SERVER": "tcp://data.tushare.org:8910",
 	"USERNAME": "13512797346",
 	"TOKEN": "eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVfdGltZSI6IjE1MjYzNjkyMzM0MTEiLCJpc3MiOiJhdXRoMCIsImlkIjoiMTM1MTI3OTczNDYifQ.0scOnH3a-LNhSETIOVcsshyhSNXxELo0r9SXZ3ER0KQ",
-
-	"SYMBOLS": ["i1809",]
+	"SYMBOLS": ["IL9","RBL9","JL9","JML9"]
 }

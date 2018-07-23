@@ -20,3 +20,4 @@ if __name__ == '__main__':
 
     # 下载数据
     downloadAllMinuteBar(api, 100)
+    

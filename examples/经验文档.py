@@ -14,7 +14,25 @@ POSITION_DB_NAME = 'VnTrader_Position_Db'#仓位记录数据库
 
 TICK_DB_NAME = 'VnTrader_Tick_Db'#tick数据库
 DAILY_DB_NAME = 'VnTrader_Daily_Db'#日k线数据库
-MINUTE_DB_NAME = 'VnTrader_1Min_Db'#分钟k想数据库
+MINUTE_DB_NAME = 'VnTrader_1Min_Db'#分钟k线数据库
+
+#-----------2.vnpy的k线数据包含哪些基础字段？
+'''
+vtSymbol:vnpy的合约代码
+symbol:合约代码
+exchange:交易所
+
+open:开盘价
+hign:最高价
+low:最低价
+close:收盘价
+
+datetime:日期时间
+date:日期
+time:时间
+
+volume:成交量
+'''
 #%%-----Tushare数据接口
 #-----------1.原vnpy的Tushare下载函数bar()错误？
 '''
